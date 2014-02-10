@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta name="viewport" id="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+    <link rel="stylesheet" href="jquery.mobile-1.4.0.min.css" />
+    <script type="text/template" data-template="rint-item">
+        <div class="rint-item">
+            <div class="rint-item-thumbnail" style="background: url(http://placehold.it/300x200)">
+                <div class="rint-item-title" data-id="<%= _id %>">
+                    <h2><%= title %></h2>
+                    <p><%= location %></p>
+                    <p><%= moment(on_day_start).format("LLL") %></p>
+                    <a href="#description-page" class="ui-btn ui-mini ui-icon-carat-r ui-btn-icon-right rint-position ui-btn-b" data-theme="b">33km</a>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script src="jquery-2.1.0.min.js"></script>
+    <script src="underscore-min.js"></script>
+    <script src="moment-with-langs.min.js"></script>
+    <script src="index.min.js"></script>
+    <script src="jquery.mobile-1.4.0.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body ng-controller="mainController">
+    <div data-role="page" id="main-page">
+        <div data-role="panel" id="main-panel" data-prefetch>
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#login-page">Login</a></li>
+                <li><a href="#">My Page</a></li>
+            </ul>
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#">Apple</a></li>
+                <li><a href="#">Banana</a></li>
+                <li><a href="#">Cherry</a></li>
+                <li><a href="#">Cranberry</a></li>
+                <li><a href="#">Grape</a></li>
+                <li><a href="#">Orange</a></li>
+            </ul>
+        </div>
+	    <div data-role="header" data-position="fixed" data-theme="b">
+            <a href="#main-panel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-delete">Menu</a>
+		    <h1>inevent</h1>
+            <a href="#login-page" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-check">Login</a>
+	    </div>
+	    <div role="main" class="ui-content">
+            <div class="rint-events">
+                <div class="rint-item">
+                    <div class="rint-item-thumbnail" style="background: url(http://placehold.it/300x200)">
+                        <div class="rint-item-title">
+                            <h2>FunFun Coding Study</h2>
+                            <p>Sinchon Toz Seoul, Korea</p>
+                            <p>2014年2月3日 午後 2:30</p>
+                            <a href="#description-page" class="ui-btn ui-mini ui-icon-carat-r ui-btn-icon-right rint-position ui-btn-b" data-theme="b">33km</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rint-item">
+                    <div class="rint-item-thumbnail" style="background: url(http://placehold.it/300x200)">
+                        <div class="rint-item-title">
+                            <h2>Lunch Tea Party</h2>
+                            <p>Sindorim Incaffee, Korea</p>
+                            <p>2014年2月3日 午後 4:00</p>
+                            <a href="#description-page" class="ui-btn ui-mini ui-icon-carat-r ui-btn-icon-right rint-position ui-btn-b" data-theme="b">17km</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rint-item">
+                    <div class="rint-item-thumbnail" style="background: url(http://placehold.it/300x200)">
+                        <div class="rint-item-title">
+                            <h2>FunFun Rint</h2>
+                            <p>Sinchon Toz Seoul, Korea</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rint-item">
+                    <div class="rint-item-thumbnail" style="background: url(http://placehold.it/300x200)">
+                        <div class="rint-item-title">
+                            <h2>FunFun Rint</h2>
+                            <p>Sinchon Toz Seoul, Korea</p>
+                        </div>
+                    </div>
+                </div>
+	        </div>
+        </div>
+    </div>
+    <div data-role="page" id="description-page" data-add-back-btn="true" data-prefetch>
+	    <div data-role="header" data-theme="b">
+		    <h1>inevent</h1>
+	    </div>
+	    <div role="main" class="ui-content">
+            <!-- 기본 설명 -->
+            <h2 style="margin-bottom:5px">FunFun Coding Study</h2>
+            <p style="margin-top:0">2014年02月3日 午後 2:30</p>
+            <p>Sinchon Toz Seoul, Sinchon</p>
+            <img src="http://placehold.it/300x200" style="width:100%" />
+            <a href="#map-page" data-ajax="false" class="ui-btn ui-icon-delete ui-btn-icon-left">Check Position</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et placerat arcu. Nam bibendum viverra augue et varius!</p>
+            <!-- 지도 -->
+
+            <!-- 참여 버튼 -->
+            <a href="#" class="ui-btn ui-icon-check ui-btn-icon-left">Inroll</a>
+            <!-- 참여자 목록 -->
+		    <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">creator</li>
+                <li>
+                    <a href="#">
+                        <img src="http://placehold.it/80x80">
+                        <h2>Rintiantta</h2>
+                        <p>programmer</p>
+                    </a>
+                </li>
+                <li data-role="list-divider">participators</li>
+                <li>
+                    <a href="#">
+                        <img src="http://placehold.it/80x80">
+                        <h2>Rintiantta</h2>
+                        <p>programmer</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="http://placehold.it/80x80">
+                        <h2>Rechart</h2>
+                        <p>programmer</p>
+                    </a>
+                </li>
+            </ul>
+	    </div>
+    </div>
+    <div data-role="page" id="map-page">
+        <div data-role="header" data-theme="b">
+		    <h1>position check</h1>
+	    </div>
+	    <div role="main" class="ui-content">
+            <div id="map-canvas"></div>
+	    </div>
+    </div>
+    <!-- Login Page -->
+    <div data-role="page" id="login-page" data-prefetch>
+        <div data-role="header" data-theme="b">
+		    <h1>login</h1>
+	    </div>
+	    <div role="main" class="ui-content">
+            <label for="login">username</label>
+            <input type="text" name="text-basic" id="login" value="asdS" />
+            <label for="password">password</label>
+            <input type="password" name="text-basic" id="password" value="" />
+            <input type="button" value="Login" data-icon="check" data-theme="a" />
+            <a href="#register-page" class="ui-shadow ui-btn ui-corner-all">Register</a>
+	    </div>
+    </div>
+    <!-- Register Page -->
+    <div data-role="page" id="register-page" data-prefetch>
+        <div data-role="header" data-theme="b">
+		    <h1>register</h1>
+	    </div>
+	    <div role="main" class="ui-content">
+            <label for="login">username</label>
+            <input type="text" name="text-basic" id="Text1" value="" />
+            <label for="password">password</label>
+            <input type="password" name="text-basic" id="password1" value="" />
+            <input type="button" value="Register" data-icon="check" data-theme="a" />
+	    </div>
+    </div>
+</body>
+</html>
+

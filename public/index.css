@@ -1,0 +1,55 @@
+﻿/* 기본 */
+* {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+ 
+.ellipsis {
+  text-overflow: ellipsis;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 아이디 */
+#map-page { height: 100%;  }
+#map-canvas {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* 클래스 */
+.rint-item {
+  height: 200px;
+  position: relative;
+  margin-bottom: 15px;
+}
+.rint-item .rint-item-thumbnail {
+  width: 100%;
+  height: 200px;
+}
+.rint-item .rint-item-title {
+  position: absolute;
+  width: 100%;
+  height: 95px;
+  background: rgba(0,0,0,0.80);
+  bottom: 0px;
+}
+.rint-item h2 {
+    font-weight: normal;
+}
+.rint-item h2, .rint-item p, .rint-item span {
+  margin: 5px;
+  color: #fff;   
+}
+.rint-item .rint-position {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+}

@@ -1,0 +1,70 @@
+[
+    {
+        "title": "홍대 점심 식사 모임",
+        "content": "<p>Content of HTML</p>",
+        "_category": {
+            "name": "음식",
+            "_id": "52dd2a998df2157c0be345f0",
+            "__v": 0,
+            "children": []
+        },
+        "_author": {
+            "login": "rintiantta",
+            "password": "123456789",
+            "_id": "52dd2a998df2157c0be345f1",
+            "__v": 0,
+            "create_at": 1390226073763,
+            "_reviews": [],
+            "_replies": [],
+            "_create_events": []
+        },
+        "price": 10000,
+        "address": "서울특별시 서대문구",
+        "location": "인카페",
+        "latitude": 127.2,
+        "longitude": 30.1,
+        "max_participators": 4,
+        "due_day_end": 1390312473766,
+        "on_day_start": 1390398873766,
+        "on_day_end": 1390402473766,
+        "_id": "52dd2a998df2157c0be345f5",
+        "__v": 0,
+        "_reviews": [
+            {
+                "_author": "52dd2a998df2157c0be345f1",
+                "title": "맛있었어요 'ㅁ'",
+                "content": "사장님이 친절하시군요 'ㅂ'",
+                "_id": "52dd2a998df2157c0be345f4",
+                "__v": 0,
+                "create_at": 1390226073765,
+                "_comments": []
+            }
+        ],
+        "_replies": [
+            {
+                "_author": "52dd2a998df2157c0be345f1",
+                "content": "언제까지 참여 가능한가요 'ㅁ'",
+                "_id": "52dd2a998df2157c0be345f3",
+                "__v": 0,
+                "create_at": 1390226073765,
+                "_comments": [
+                    "52dd2a998df2157c0be345f2"
+                ]
+            }
+        ],
+        "due_day_start": 1390226073766,
+        "_participators": [
+            {
+                "login": "rintiantta",
+                "password": "123456789",
+                "_id": "52dd2a998df2157c0be345f1",
+                "__v": 0,
+                "create_at": 1390226073763,
+                "_reviews": [],
+                "_replies": [],
+                "_create_events": []
+            }
+        ],
+        "create_at": 1390226073766
+    }
+]
